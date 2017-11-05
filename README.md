@@ -3,4 +3,4 @@ Assignment 05: Choose a song and use it to generate visual items. Use images as 
 
 [View](https://luferrari.github.io/cc-repo-05/)
 
-["Pie in the sky" soundtrack by HookSounds](https://www.hooksounds.com/)
+"Pie in the sky" by [HookSounds](https://www.hooksounds.com/)
