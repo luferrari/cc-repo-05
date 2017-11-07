@@ -79,13 +79,13 @@ function freqGen() {
     stroke(lerpColor(color(214, 69, 80, 223), color(234, 158, 141, 223), f / 350));
 
     push();
-    translate(0, f * 1);
+    translate(0, f * 0.875);
     beginShape();
     for (v = 0; v < spectrum.length; v += 20) {
       vertex(v, map(spectrum[v], 0, 255, height * 0.666, height * 0.25));
     }
     endShape();
-    step *= 1.5;
+    step *= 1.25;
     pop();
   }
   pop();
