@@ -1,14 +1,10 @@
 var music, pie, sky, frequency, amplitude;
 
 function preload() {
-  pie = loadImage('./assets/pie.png')
-  sky = loadImage('./assets/sky.png');
-  music = loadSound('./assets/pie in the sky.mp3');
-  // Music by HookSounds
-  // see music-readme.txt for more info
+  music = loadSound('./assets/pie in the sky.mp3');   // Muciojad @ HookSounds
+  pie = loadImage('./assets/pie.png');                // Salinee Pimpakun @ ShareIcon
+  sky = loadImage('./assets/sky.png');                // custom made
 }
-
-
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -24,8 +20,6 @@ function setup() {
   amplitude = new p5.Amplitude();
   amplitude.setInput(music);
 }
-
-
 
 function draw() {
   var co = 3;
@@ -49,8 +43,6 @@ function draw() {
     0.2 * sqrt(width * height), 0.2 * sqrt(width * height));
 }
 
-
-
 function ampGen() {
   var vol = amplitude.getLevel();
   amp = map(vol, 0, 0.9, 10, 250);
@@ -63,8 +55,6 @@ function ampGen() {
   fill(238, 244, 212, 127);
   ellipse(width * 0.9, width * 0.1, amp * a * 0.25);
 }
-
-
 
 function freqGen() {
   var spectrum = frequency.analyze();
@@ -90,8 +80,6 @@ function freqGen() {
   }
   pop();
 }
-
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
